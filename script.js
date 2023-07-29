@@ -5,6 +5,7 @@ let Remaining_guesses = Total_GUESSES;
 let curr_Guess = [];
 let nextLetter = 0;
 let Word_TO_GUESS = WORDS[Math.floor(Math.random() * WORDS.length)]
+console.log(Word_TO_GUESS)
 
 function initBoard() {
     let board = document.getElementById("game-board");
@@ -85,9 +86,9 @@ function checkGuess() {
     }
 
     if (guessString.length != 5) {
-        alert("Not enough letters!")
-        return
-    }
+        showMessage("Not enough letters!");
+        return;
+      }
 
     if (!WORDS.includes(guessString)) {
         const gameBoard = document.getElementById("game-board");
@@ -127,20 +128,30 @@ function checkGuess() {
     }
 
     if (guessString === Word_TO_GUESS) {
-        alert("You guessed right! Game over!")
-        Remaining_guesses = 0
-        return
-    } else {
+        showMessage("You guessed right! Well Played!");
+        Remaining_guesses = 0;
+        return;
+      } else {
         Remaining_guesses -= 1;
         curr_Guess = [];
         nextLetter = 0;
-
+    
         if (Remaining_guesses === 0) {
-            alert("You've run out of guesses! Game over!")
-            alert(`The right word was: "${Word_TO_GUESS}"`)
+        //   showMessage("");
+          showMessage(`You've run out of guesses! Game over! The right word was: "${Word_TO_GUESS}"`);
         }
-    }
+      }
 }
+
+function showMessage(message) {
+    const messageBar = document.getElementById("message-bar");
+    messageBar.textContent = message;
+    messageBar.style.display = "block";
+  
+    setTimeout(() => {
+      messageBar.style.display = "none";
+    }, 3000);
+  }
 
 function shadeKeyBoard(letter, color) {
     for (const elem of document.getElementsByClassName("keyboard-button")) {

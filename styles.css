@@ -150,3 +150,22 @@ body {
       padding: 0.3rem;
     }
   }
+
+
+  .message-bar {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Helvetica Neue', cursive;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Center text within the box */
+    white-space: nowrap;
+  }

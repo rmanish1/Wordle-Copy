@@ -1,234 +1,235 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Borel&family=Handjet:wght@900&display=swap');
 
-*{
+* {
   margin: 0;
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif !important;
-  }
+  font-family: "Helvetica Neue", Arial, sans-serif !important;
+}
 
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    border: 2px solid #e0e0e0;
-    padding: 20px;
-    margin-bottom: 18px;
-    background: #f0f0f0;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
-  }
-  
-  .header h1 {
-    flex-grow: 1;
-    margin: 0;
-    font-family: 'Handjet', cursive;
-    padding-left: 60px;
-    font-size: 2.9rem;
-    text-align: center;
-    font-weight: 900;
-    color: #116530;
-  }
-  
-  
-  
-  
-  #game-board {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .letter-box {
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    margin: 8px;
-    font-size: 2.5rem;
-    font-weight: 700;
-    height: 3rem;
-    width: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .letter-box:hover {
-    transform: translateY(-2px);
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
-  }
-  
-  /* .filled-box {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  padding: 20px;
+  margin-bottom: 18px;
+  background: #f0f0f0;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.header h1 {
+  flex-grow: 1;
+  margin: 0;
+  font-family: 'Handjet', cursive;
+  padding-left: 60px;
+  font-size: 2.9rem;
+  text-align: center;
+  font-weight: 900;
+  color: #116530;
+}
+
+
+
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  margin: 8px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.letter-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+/* .filled-box {
     border: 2px solid #1a1a1a;
   } */
-  
-  .letter-row {
-    display: flex;
-  }
-  
-.example{
+
+.letter-row {
+  display: flex;
+}
+
+.example {
   display: flex;
   margin-bottom: 4px;
 }
-.small_box{
+
+.small_box {
   font-family: "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1.3rem;
   font-weight: 900;
   background-color: white;
-    border: 2px solid black;
-    color: black;
-    margin-left: 10px;
-    width: 30px;
-    text-align: center;
+  border: 2px solid black;
+  color: black;
+  margin-left: 10px;
+  width: 30px;
+  text-align: center;
 }
 
 
-  #keyboard-cont {
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f0f0f0;
-    border-radius: 16px;
-    padding: 1rem;
-    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.5);
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.5);
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.9rem;
+  margin: 0 3px;
+  margin-bottom: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.keyboard-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
+}
+
+
+.game-board.shake {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
   }
-  
-  #keyboard-cont div {
-    display: flex;
+
+  25%,
+  75% {
+    transform: translateX(-5px);
   }
-  
-  .second-row {
-    margin: 0.5rem 0;
+
+  50% {
+    transform: translateX(5px);
   }
-  
+}
+
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .letter-box {
+    font-size: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  /* .keyboard-button {
+      font-size: 0.9rem;
+      padding: 0.4rem;
+    } */
+
   .keyboard-button {
     font-size: 1rem;
     font-weight: 700;
     padding: 0.9rem;
     margin: 0 3px;
-    margin-bottom: 0;
-    cursor: pointer;
-    text-transform: uppercase;
-    border: none;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .letter-box {
+    font-size: 1.8rem;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+
+
+.message-bar {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  font-family: 'Helvetica Neue';
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  #keyboard-cont {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    padding: 10px;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.5);
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
-  
-  .keyboard-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
-  }
-  
-
-  .game-board.shake {
-    animation: shake 0.5s;
-  }
-  
-  @keyframes shake {
-    0%, 100% {
-      transform: translateX(0);
-    }
-    25%, 75% {
-      transform: translateX(-5px);
-    }
-    50% {
-      transform: translateX(5px);
-    }
-  }
-  
-
-@media (max-width: 768px) {
-    body {
-      font-size: 14px;
-    }
-  
-    .letter-box {
-      font-size: 2rem;
-      height: 2.5rem;
-      width: 2.5rem;
-    }
-  
-    /* .keyboard-button {
-      font-size: 0.9rem;
-      padding: 0.4rem;
-    } */
-
-    .keyboard-button {
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 0.9rem;
-      margin: 0 3px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    body {
-      font-size: 12px;
-    }
-  
-    .letter-box {
-      font-size: 1.8rem;
-      height: 2rem;
-      width: 2rem;
-    }
+    box-shadow: 8px -8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.5);
   }
 
-
-
-  .message-bar {
-    display: none;
-    position: fixed;
-    top: 70px;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    font-family: 'Helvetica Neue';
-    font-size: 1.2rem;
+  .keyboard-button {
+    font-size: 0.7rem;
     font-weight: 700;
-    color: #ffffff;
-    padding: 10px 20px;
-    background-color: #1a1a1a;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
-    white-space: nowrap;
+    padding: 0.7rem;
+    height: 58px;
+    margin: 0 3px;
   }
-
-  @media (max-width: 480px) {
-    #keyboard-cont {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin-top: 0;
-      padding: 10px;
-      border-radius: 0;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #f0f0f0;
-      box-shadow: 8px -8px 16px rgba(0, 0, 0, 0.1), -8px -8px 16px rgba(255, 255, 255, 0.5);
-    }
-  
-    .keyboard-button {
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 0.7rem;
-      height: 58px;
-      margin: 0 3px;
-    }
-  }
-
-  
-  
-  
+}

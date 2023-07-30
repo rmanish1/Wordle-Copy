@@ -53,9 +53,9 @@ body {
     box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.5);
   }
   
-  .filled-box {
+  /* .filled-box {
     border: 2px solid #1a1a1a;
-  }
+  } */
   
   .letter-row {
     display: flex;
@@ -84,7 +84,8 @@ body {
     font-size: 1rem;
     font-weight: 700;
     padding: 0.9rem;
-    margin: 0 2px;
+    margin: 0 3px;
+    margin-bottom: 0;
     cursor: pointer;
     text-transform: uppercase;
     border: none;
@@ -128,15 +129,29 @@ body {
       width: 2.5rem;
     }
   
-    .keyboard-button {
+    /* .keyboard-button {
       font-size: 0.9rem;
       padding: 0.4rem;
+    } */
+
+    .keyboard-button {
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.9rem;
+      margin: 0 3px;
     }
   }
   
   @media (max-width: 480px) {
     body {
       font-size: 12px;
+    }
+
+    #keyboard-cont{
+      padding: 50px 10px;
+      border-radius: 0;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
     }
   
     .letter-box {
@@ -145,9 +160,16 @@ body {
       width: 2rem;
     }
   
-    .keyboard-button {
+    /* .keyboard-button {
       font-size: 0.8rem;
       padding: 0.3rem;
+    } */
+
+    .keyboard-button {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.7rem;
+      margin: 0 3px;
     }
   }
 

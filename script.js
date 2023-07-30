@@ -91,6 +91,7 @@ function checkGuess() {
       }
 
     if (!WORDS.includes(guessString)) {
+        showMessage("Not in Word List!")
         const gameBoard = document.getElementById("game-board");
         gameBoard.classList.add("shake");
         setTimeout(() => {
@@ -108,12 +109,12 @@ function checkGuess() {
 
         let letterPosition = rightGuess.indexOf(curr_Guess[i])
         if (letterPosition === -1) {
-            letterColor = '	#818589'
+            letterColor = '	#787c7e' //non matching cells
         } else {
             if (curr_Guess[i] === rightGuess[i]) {
-                letterColor = '#33CC33'
+                letterColor = '#6aaa64'
             } else {
-                letterColor = '#CB9D06'
+                letterColor = '#c9b458'
             }
 
             rightGuess[letterPosition] = "#"
@@ -123,6 +124,7 @@ function checkGuess() {
         setTimeout(() => {
             animateCSS(box, 'flipInX')
             box.style.backgroundColor = letterColor
+            box.style.color = "white"
             shadeKeyBoard(letter, letterColor)
         }, delay)
     }

@@ -109,7 +109,7 @@ function checkGuess() {
 
         let letterPosition = rightGuess.indexOf(curr_Guess[i])
         if (letterPosition === -1) {
-            letterColor = '	#787c7e' //non matching cells
+            letterColor = '#787c7e' //non matching cells
         } else {
             if (curr_Guess[i] === rightGuess[i]) {
                 letterColor = '#6aaa64'

@@ -6,13 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle Copy</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="crossword.png"/>
+    <link rel="icon" type="image/png" href="crossword.png" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'></head>
 
 <body>
-    <h1> Wordle Clone </h1>
+    <div class="header">
+        <h1> Wordle Clone </h1>
+        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+            <i class='bx bx-help-circle' style="font-size: 3rem;"></i>
+        </button>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="exampleModalLabel" style="padding-top: 20px;">How To Play</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h6>Guess the Wordle in 6 tries.</h6>
+                    <ul>
+                        <li>Each guess must be a valid 5-letter word.</li>
+                        <li>The color of the tiles will change to show how close your guess was to the word.</li>
+                    </ul>
+                    <hr>
+                    <h5>Examples</h5>
+                    <div class="example">
+                        <div class="small_box" style="color: white; border: none; background-color: #6aaa64;">W</div>
+                        <div class="small_box">E</div>
+                        <div class="small_box">A</div>
+                        <div class="small_box">R</div>
+                        <div class="small_box">Y</div>  
+                    </div>
+                    <p><span class="font-weight-bold">W</span> is in the word and in the correct spot.</p>
+                    <div class="example">
+                        <div class="small_box">P</div>
+                        <div class="small_box" style="color: white; border: none; background-color: #c9b458;">I</div>
+                        <div class="small_box">L</div>
+                        <div class="small_box">L</div>
+                        <div class="small_box">S</div>  
+                    </div>
+                    <p><span class="font-weight-bold">I</span> is in the word but in the wrong spot</p>
+                    <div class="example">
+                        <div class="small_box">V</div>
+                        <div class="small_box">A</div>
+                        <div class="small_box">G</div>
+                        <div class="small_box" style="color: white; border: none; background-color: #787c7e;">U</div>
+                        <div class="small_box">E</div>  
+                    </div>
+                    <p><span class="font-weight-bold">U</span> is not in the word in any spot</p>
+                </div>
+                <div class="modal-footer" style="flex-direction: column;">
+                    <p>A new puzzle is released everytime you refresh or visit this page.</p>
+                    <br>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div id="message-bar" class="message-bar">Not enough letters!</div>
     <div id="game-board" class="game-board">
@@ -60,6 +119,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
     <script src="script.js" type="module"></script>
 </body>
 

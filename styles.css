@@ -7,21 +7,32 @@
 }
 
 body {
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-family: "Helvetica Neue", Arial, sans-serif !important;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 18px;
+    background: #f0f0f0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
   }
   
-  h1 {
-    margin-bottom: 18px;
+  .header h1 {
+    flex-grow: 1;
+    margin: 0;
     font-family: 'Handjet', cursive;
+    padding-left: 60px;
     font-size: 2.9rem;
     text-align: center;
     font-weight: 900;
     color: #116530;
-    border: 2px solid #e0e0e0;
-    padding: 20px;
-    background: #f0f0f0;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1), -4px -4px 8px rgba(255, 255, 255, 0.7);
   }
+  
   
   
   
@@ -61,6 +72,23 @@ body {
     display: flex;
   }
   
+.example{
+  display: flex;
+  margin-bottom: 4px;
+}
+.small_box{
+  font-family: "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1.3rem;
+  font-weight: 900;
+  background-color: white;
+    border: 2px solid black;
+    color: black;
+    margin-left: 10px;
+    width: 30px;
+    text-align: center;
+}
+
+
   #keyboard-cont {
     margin: 1rem 0;
     display: flex;

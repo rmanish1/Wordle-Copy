@@ -5,7 +5,7 @@ let Remaining_guesses = Total_GUESSES;
 let curr_Guess = [];
 let nextLetter = 0;
 let Word_TO_GUESS = WORDS[Math.floor(Math.random() * WORDS.length)]
-console.log(Word_TO_GUESS)
+// console.log(Word_TO_GUESS)
 
 function initBoard() {
     let board = document.getElementById("game-board");
@@ -130,7 +130,7 @@ function checkGuess() {
     }
 
     if (guessString === Word_TO_GUESS) {
-        showMessage("You guessed right! Well Played!");
+        showMessage("You guessed right!<br>Well Played!");
         Remaining_guesses = 0;
         return;
       } else {
@@ -140,14 +140,15 @@ function checkGuess() {
     
         if (Remaining_guesses === 0) {
         //   showMessage("");
-          showMessage(`You've run out of guesses! Game over! The right word was: "${Word_TO_GUESS}"`);
+        showMessage(`You've run out of guesses! Game over!<br>The right word was: "${Word_TO_GUESS}"`);
         }
       }
 }
 
 function showMessage(message) {
     const messageBar = document.getElementById("message-bar");
-    messageBar.textContent = message;
+    // messageBar.textContent = message;
+    messageBar.innerHTML = message;
     messageBar.style.display = "block";
   
     setTimeout(() => {

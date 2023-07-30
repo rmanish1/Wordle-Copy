@@ -161,6 +161,7 @@ body {
     position: fixed;
     top: 70px;
     left: 50%;
+    text-align: center;
     transform: translateX(-50%);
     font-family: 'Helvetica Neue', cursive;
     font-size: 1.2rem;

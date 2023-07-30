@@ -163,7 +163,7 @@ body {
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
-    font-family: 'Helvetica Neue', cursive;
+    font-family: 'Helvetica Neue';
     font-size: 1.2rem;
     font-weight: 700;
     color: #ffffff;
